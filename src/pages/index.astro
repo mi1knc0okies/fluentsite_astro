@@ -1,9 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Home from '../components/home.astro';
+import Mission from '../components/mission.astro';
+import Services from '../components/whatWeDo.astro';
+import Solutions from '../components/solutions.astro';
+import Work from '../components/ourWork.astro';
+import Contact from '../components/contact.astro';
 ---
 
-<Layout title="Fluent Innovations">
+<Layout title="Home | Fluent Innovations - Web Design and Applications">
 	<main>
-
-	</main>
+		<div class="bg-zinc-700">
+			<Home />
+		</div>
+		<div id="mission" class="bg-white">
+			<Mission />
+		</div>
+		<div id="services" class="bg-zinc-200">
+			<Services />
+		</div>	
+		<div id="solutions" class="bg-zinc-500">
+			<Solutions />
+		</div>
+		<div id="work" class="bg-white">
+			<Work />
+		</div>	
+		<div id="contact" class="bg-zinc-200">
+			<Contact />
+		</div>
+	</main>	
 </Layout>

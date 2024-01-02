@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import FILogo from "../images/Hori_Color.png"
+---
+
+<nav class="print-hidden bg-gray-700">
+            <div class="xl:container mx-auto px-4">
+                <div class='flex justify-between'>
+                    {/* Navbar Logo */}
+                    <div class='flex items-center'>
+                        <a href='/' class='flex items-center p-2'>
+                            <Image src={FILogo} height={88} alt="Form 10 Group"/>
+                        </a>
+                    </div>
+                            <a href="/manualForms" class='hidden md:flex items-center p-0  text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400'>
+                                Forms
+                            </a>
+                            <a href="/newForm" class='hidden md:flex items-center p-0  text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400'>
+                                New Form
+                            </a>
+                            <a href="/importTicket/search" class='hidden md:flex items-center p-0  text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400'>
+                                Import From CW
+                            </a>
+               
+                    </div>
+                    {/* Mobile Button Here */}
+                    <div class='md:hidden flex items-center'>
+                        <button type='button' onclick=""> <!-- insert mobile svg icon here -->
+                            
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {/* Mobile Menu */}
+            <div class="flex items-center transform transition-transform duration-300 md:hidden origin-top overflow-hidden">
+                <div class=" p-2 rounded shadow-md">
+                    <div class='p-2 rounded shadow-md'>
+                    </div>
+                    <a href='/manualForms' class='block py-2 px-4 text-white hover:bg-gray-100 p-2 rounded shadow-md'>Created Forms</a>
+                    <a href='/newForm' class='block py-2 px-4 text-white hover:bg-gray-100 p-2 rounded shadow-md'>New Blank Form</a>
+                    <a href='/newForm' class='block py-2 px-4 text-white hover:bg-gray-100 p-2 rounded shadow-md'>Import Data to Form</a>
+                </div>
+            </div>
+        </nav>
