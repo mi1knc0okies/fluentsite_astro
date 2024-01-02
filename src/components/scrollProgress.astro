@@ -1,6 +1,30 @@
-<div class="scrollprogress border-2 border-red-500 -rotate-90">
-    <progress class="progress w-full" value="10" max="100"></progress>
+        <a href="/" class="scrollprogress btn fixed bottom-24 right-0 -rotate-90 bg-inherit border-1 shadow-none text-white text-sm font-light hover:bg-inherit"><i class="ti-angle-right text-sm pr-3"></i><span>Back To Top</span></a>
+       
+        <div class="fixed left-20 w-[1px] h-full bg-white bg-opacity-40"></div>
+        <div class="fixed left-20 w-[1px] bg-white" id="progressBarLeft"></div>
+        <div class="fixed right-20 w-[1px] h-full bg-white bg-opacity-40"></div>
+        <div class="fixed right-20 bottom-0 w-[1px] bg-white" id="progressBarRight"></div>
 
-    <a href="/" class="btn"><i class="ti-angle-right text-sm pr-3"></i>Back To Top</a>
-</div>
 
+       <script>
+
+	window.addEventListener('scroll', handleScrollLeft);
+
+	function handleScrollLeft() {
+		var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;  
+		var scrolled = (winScroll / height) * 100;
+	  
+		document.getElementById("progressBarLeft").style.height = scrolled + "%";
+	}
+
+        window.addEventListener('scroll', handleScrollRight);
+
+        function handleScrollRight() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;  
+        var scrolled = (winScroll / height) * 100;
+  
+        document.getElementById("progressBarRight").style.height = scrolled + "%";
+}
+	</script>
