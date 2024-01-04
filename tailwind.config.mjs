@@ -15,7 +15,7 @@ export default {
 		},	
 		fontSize: {
 			sm: '.75rem',
-			base: '',
+			base: '1rem',
 			lg: '1.5rem',
 			xl: '1.875rem',
 			'3xl': '2rem',
@@ -25,8 +25,22 @@ export default {
 		extend: {
 			lineHeight: {
 				'leading-snug': '1.3',
-			},
+			}
 		},
 	},
+	daisyui: {
+		themes: [
+		  {
+			dark: {
+			  ...require("daisyui/src/theming/themes")["dark"],
+			  "primary": "#01e9a3",
+			  "secondary": "#e1fe53",
+			  "accent": "#75158c",
+			},
+		  },
+		],
+	  },
+
 	plugins: [require("daisyui")],
 }
+
