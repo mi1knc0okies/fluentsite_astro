@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
@@ -20,12 +22,12 @@ export default {
 			xl: '1.875rem',
 			'3xl': '2rem',
 			'4xl': '2.5rem',
-			'5xl': '3rem',
+			'5xl': '2.75rem',
 		},
 		extend: {
-			lineHeight: {
-				'leading-snug': '1.3',
-			}
+			fontFamily: {
+				'sans': ['roboto', ...defaultTheme.fontFamily.sans],
+			},
 		},
 	},
 	daisyui: {

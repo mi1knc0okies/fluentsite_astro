@@ -3,3 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'montserrat';
+    src: url('../public/fonts/montserrat.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../public/fonts/roboto.ttf') format('ttf');
+}
+
+/* @layer utilities {
+    .font-expanded {
+      font-stretch: expanded;
+    }
+  } */
