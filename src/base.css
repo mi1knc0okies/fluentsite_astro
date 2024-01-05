@@ -13,6 +13,26 @@
     src: url('../public/fonts/roboto.ttf') format('ttf');
 }
 
+@layer base {
+  h1 {
+    @apply text-3xl md:text-4xl font-bold tracking-wider leading-tight mb-4;
+  }
+  h2 {
+    @apply text-xl font-medium tracking-wider leading-snug mb-4;
+  }
+  h3 {
+    @apply text-lg tracking-wide leading-snug mb-4;
+  }
+}
+
+/* h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.375;
+  margin-bottom: 1rem;
+} */
+
 /* @layer utilities {
     .font-expanded {
       font-stretch: expanded;
