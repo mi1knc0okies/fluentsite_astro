@@ -3,14 +3,14 @@ import { Image } from "astro:assets";
 import FILogo from "../images/FIlogo4.png"  
 ---
 
-<div class="navbar fixed px-4 py-2 md:px-32 md:py-6">
+<div class="navbar fixed px-4 py-2 xl:px-32 xl:py-6">
         <a href="/"><Image src={FILogo} alt="Fluent Innovations" height={84}></a>
-    <div class="navbar-end">
+    <div class="navbar-end w-full lg:hidden">
       <div class="dropdown">
         <div tabindex="0" class="lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 32 32" stroke="white"><path stroke-width="2" d="M0 1h15M0 12h30m-15 11h15" /></svg>
         </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content text-black z-[1] p-2 bg-white w-screen">
+        <ul tabindex="0" class="menu menu-sm dropdown-content text-black z-[1] p-2 bg-white w-56">
             <li><a href="/" class="hover:text-gray-400">Home</a></li>
             <li><a href="#mission">Our mission</a></li>
             <li><a href="#services">What we do</a></li>
@@ -20,8 +20,8 @@ import FILogo from "../images/FIlogo4.png"
         </ul>
       </div>
     </div>
-    <div class="navbar-end hidden lg:flex border-2">
-      <ul class="menu menu-horizontal text-primary border-2">
+    <div class="navbar-end hidden lg:w-full lg:flex">
+      <ul class="menu menu-horizontal text-base text-primary">
         <li><a href="/" class="hover:text-accent md:hover:bg-transparent">Home</a></li>
         <li><a href="#mission" class="hover:text-accent md:hover:bg-transparent">Our mission</a></li>
         <li><a href="#services" class="hover:text-accent md:hover:bg-transparent">What we do</a></li>
