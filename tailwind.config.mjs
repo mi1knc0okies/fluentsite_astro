@@ -12,12 +12,13 @@ export default {
 				sm: '2rem',
 				lg: '3rem',
 				xl: '4rem',
-				'2xl': '3.5rem',
+				'2xl': '4rem',
 			}
 		},	
 		fontSize: {
 			sm: '.75rem',
 			base: '1rem',
+			md: '1.13rem',
 			lg: '1.5rem',
 			xl: '1.875rem',
 			'3xl': '2rem',
