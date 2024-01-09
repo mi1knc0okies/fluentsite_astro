@@ -15,13 +15,16 @@
 
 @layer base {
   h1 {
-    @apply text-3xl lg:text-4xl font-bold tracking-wider leading-tight mb-4;
+    @apply text-3xl lg:text-4xl font-bold tracking-wide leading-snug mb-6;
   }
   h2 {
-    @apply text-xl font-medium tracking-wider leading-snug mb-4;
+    @apply text-xl font-light tracking-wide leading-snug mb-4;
   }
   h3 {
-    @apply text-lg tracking-wide leading-snug mb-4;
+    @apply text-lg font-light leading-snug mb-4;
+  }
+  p {
+    @apply font-extralight leading-relaxed;
   }
 }
 
@@ -38,3 +41,6 @@
       font-stretch: expanded;
     }
   } */
+
+
+  

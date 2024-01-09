@@ -3,12 +3,12 @@ import { Image } from "astro:assets";
 import FILogo from "../images/FIlogo4.png"  
 ---
 <!-- Navbar -->
-<div class="navbar fixed px-4 py-2 lg:pl-8 xl:px-32 xl:py-6">
+<div class="navbar fixed px-4 py-2 lg:pl-8 xl:px-32 xl:py-6 bg-white lg:bg-transparent">
         <a href="/"><Image src={FILogo} alt="Fluent Innovations" height={84}></a>
     <div class="navbar-end w-full lg:hidden">
       <div class="dropdown">
         <div tabindex="0" class="lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 32 32" stroke="white"><path stroke-width="2" d="M0 1h15M0 12h30m-15 11h15" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 32 32" stroke="black"><path stroke-width="2" d="M0 1h15M0 12h30m-15 11h15" /></svg>
         </div>
         <ul tabindex="0" class="menu menu-sm dropdown-content text-black z-[1] p-2 bg-white w-56">
             <li><a href="/" class="hover:text-gray-400">Home</a></li>
