@@ -28,6 +28,9 @@
   }
 }
 
+.fa-stack-1x { font-size: 1.3em; }
+i { vertical-align: middle;}
+
 /* h2 {
   font-size: 1.875rem;
   font-weight: 700;
