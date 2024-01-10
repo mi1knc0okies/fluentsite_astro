@@ -18,21 +18,23 @@
     @apply text-3xl lg:text-4xl font-bold tracking-wide leading-snug mb-6;
   }
   h2 {
-    @apply text-xl font-light tracking-wide leading-snug mb-4;
+    @apply text-xl tracking-wide leading-snug mb-4;
   }
   h3 {
-    @apply text-lg font-light leading-snug mb-4;
+    @apply text-lg leading-snug mb-4;
   }
   p {
-    @apply font-extralight leading-relaxed;
+    @apply font-light leading-relaxed;
   }
 }
 
 .fa-stack-1x { font-size: 1.3em; }
-i { vertical-align: middle;}
+i { vertical-align: middle; 
+    color: #6d28d9;
+}
 
 .btn {
-  @apply mix-blend-lighten transition duration-200 ease-in hover:ease-in hover:bg-accent hover:text-primary hover:border-transparent;
+  @apply mix-blend-lighten transition duration-200 ease-in hover:ease-in hover:bg-violet-500 hover:border-accent hover:text-primary;
 }
 
 .hover-underline-animation {
@@ -49,7 +51,7 @@ i { vertical-align: middle;}
   height: 4px;
   bottom: 0;
   left: 0;
-  background-color: #f0abfc;
+  background-color: #6d28d9;
   transform-origin: bottom left;
   transition: transform 0.20s ease-out;
 }
