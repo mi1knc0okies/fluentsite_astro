@@ -31,19 +31,30 @@
 .fa-stack-1x { font-size: 1.3em; }
 i { vertical-align: middle;}
 
-/* h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  line-height: 1.375;
-  margin-bottom: 1rem;
-} */
+.btn {
+  @apply mix-blend-lighten transition duration-200 ease-in hover:ease-in hover:bg-accent hover:text-primary hover:border-transparent;
+}
 
-/* @layer utilities {
-    .font-expanded {
-      font-stretch: expanded;
-    }
-  } */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
 
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #f0abfc;
+  transform-origin: bottom left;
+  transition: transform 0.20s ease-out;
+}
 
-  
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

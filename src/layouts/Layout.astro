@@ -4,7 +4,9 @@ import "../themify-icons.css"
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import ScrollProgress from '../components/scrollProgress.astro';
-import SideNav from "../components/sideNav.astro";
+import SideNav from '../components/sideNav.astro';
+import Background from '../background.css';
+
 
 interface Props {
 	title: string;
@@ -25,7 +27,7 @@ const { title } = Astro.props;
 		<script src="https://kit.fontawesome.com/8915c7ee57.js" crossorigin="anonymous"></script>
 	</head>
 	
-	<body>
+	<body class={Background}>
 		<div><Navbar /></div>
 		<div><ScrollProgress /></div>
 		<div><SideNav /></div>
