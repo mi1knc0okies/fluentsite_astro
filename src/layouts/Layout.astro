@@ -28,10 +28,10 @@ const { title } = Astro.props;
 	</head>
 	
 	<body class={Background}>
-		<div><Navbar /></div>
-		<div><ScrollProgress /></div>
-		<div><SideNav /></div>
-		<div><slot /></div>
-		<div><Footer /></div>
+		<Navbar />
+		<SideNav />
+		<ScrollProgress />
+		<slot />
+		<Footer />
 	</body>
 </html>
