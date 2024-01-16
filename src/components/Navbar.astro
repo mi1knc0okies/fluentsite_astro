@@ -2,7 +2,39 @@
 import { Image } from "astro:assets";
 import FILogo from "../images/FIlogo9.png"  
 ---
-<!-- Navbar -->
+<!-- Navbar mobile -->
+<div tabindex="0" class="lg:hidden collapse collapse-plus fixed bg-white rounded-none text-black shadow">
+  <div class="collapse-title py-2">
+    <a href="/"><Image src={FILogo} alt="Fluent Innovations" height={64}></a>
+  </div>
+  <div class="collapse-content"> 
+        <ul tabindex="0" class="py-2 z-[1] text-gray-500">
+            <li class="mb-4"><a href="/">Home</a></li>
+            <li class="mb-4"><a href="#mission">Our mission</a></li>
+            <li class="mb-4"><a href="#services">What we do</a></li>
+            <li class="mb-4"><a href="#solutions">Our solutions</a></li>
+            <li class="mb-4"><a href="#work">Our work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>  
+  </div>
+</div>
+<!-- Navbar lg, xl -->
+<div class="hidden lg:navbar fixed lg:pl-8 xl:px-32 lg:py-4 xl:py-6 bg-white xl:bg-transparent shadow xl:shadow-none">
+  <a href="/"><Image src={FILogo} alt="Fluent Innovations" height={84}></a>
+  <div class="navbar-end w-full flex">
+    <ul class="menu-horizontal text-base text-black xl:text-primary leading-8">
+      <li><a href="/" class="hover-underline-animation px-0 mx-4">Home</a></li>
+      <li><a href="#mission" class="hover-underline-animation px-0 mx-4">Our mission</a></li>
+      <li><a href="#services" class="hover-underline-animation px-0 mx-4">What we do</a></li>
+      <li><a href="#solutions" class="hover-underline-animation px-0 mx-4">Our solutions</a></li>
+      <li><a href="#work" class="hover-underline-animation px-0 mx-4">Our work</a></li>
+      <li><a href="#contact" class="hover-underline-animation px-0 mx-4">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<!--
 <div class="navbar fixed px-4 py-2 lg:pl-8 xl:px-32 xl:py-6 bg-white xl:bg-transparent shadow xl:shadow-none">
         <a href="/"><Image src={FILogo} alt="Fluent Innovations" height={84}></a>
     <div class="navbar-end w-full lg:hidden">
@@ -31,3 +63,4 @@ import FILogo from "../images/FIlogo9.png"
       </ul>
     </div>
   </div>
+   -->
