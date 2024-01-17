@@ -32,12 +32,6 @@
   -webkit-text-stroke: 1px white;
 }
 
-/* Footer social icon style */
-.fa-stack-1x { font-size: 1.3em; }
-i { vertical-align: middle; 
-    color: #6d28d9;
-}
-
 /* Buttons */
 .btn.btn-primary {
   @apply mix-blend-lighten transition duration-200 ease-in hover:ease-in hover:bg-violet-500 hover:border-accent hover:text-primary;
@@ -46,26 +40,15 @@ i { vertical-align: middle;
   @apply text-white;
 }
 
-/* Link hover */
-.hover-underline-animation {
-  display: inline-block;
-  position: relative;
+/* Navbar active link */
+.nav-link {
+  border-bottom: 4px solid transparent;
+  padding-bottom: 4px;
+  text-decoration: none;
 }
-.hover-underline-animation::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 4px;
-  bottom: 0;
-  left: 0;
-  background-color: #6d28d9;
-  transform-origin: bottom left;
-  transition: transform 0.20s ease-out;
-}
-.hover-underline-animation:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+.nav-link.active {
+  text-decoration: none;
+  border-bottom-color: #6d28d9;
 }
 
 /* Navbar shadow */
@@ -73,6 +56,30 @@ i { vertical-align: middle;
   --tw-shadow: 0 0.5rem 1.5rem 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+/* Navbar collapse icon */
+.collapse-plus > .collapse-title:after {
+  position: absolute;
+  display: block;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 300ms;
+  top: 1.8rem;
+  inset-inline-end: 2.4rem;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='black'%3E%3Cpath stroke-width='2' d='M0 2h15M0 12h30m-15 10h15' /%3E%3C/svg%3E");
+}
+.collapse[open].collapse-plus > .collapse-title:after,
+.collapse-open.collapse-plus > .collapse-title:after,
+.collapse-plus:focus:not(.collapse-close) > .collapse-title:after,
+.collapse-plus:not(.collapse-close) > input[type="checkbox"]:checked ~ .collapse-title:after,
+.collapse-plus:not(.collapse-close) > input[type="radio"]:checked ~ .collapse-title:after {
+  content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' height='300' width='300'%3E%3Cline x1='75' y1='0' x2='75' y2='150' style='stroke:%23000; stroke-width:6' /%3E%3Cline x1='0' y1='75' x2='150' y2='75' style='stroke:%23000; stroke-width:6' /%3E%3C/svg%3E");
+  scale: 20%;
+  transform: rotate(45deg);
+  top: 1rem;
+  inset-inline-end: 2rem;
 }
 
 /* Contact form */
@@ -101,26 +108,8 @@ i { vertical-align: middle;
   outline: 0;
 }
 
-/* Navbar collapse icon */
-.collapse-plus > .collapse-title:after {
-  position: absolute;
-  display: block;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-duration: 300ms;
-  top: 1.8rem;
-  inset-inline-end: 2.4rem;
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='black'%3E%3Cpath stroke-width='2' d='M0 2h15M0 12h30m-15 10h15' /%3E%3C/svg%3E");
-}
-.collapse[open].collapse-plus > .collapse-title:after,
-.collapse-open.collapse-plus > .collapse-title:after,
-.collapse-plus:focus:not(.collapse-close) > .collapse-title:after,
-.collapse-plus:not(.collapse-close) > input[type="checkbox"]:checked ~ .collapse-title:after,
-.collapse-plus:not(.collapse-close) > input[type="radio"]:checked ~ .collapse-title:after {
-  content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' height='300' width='300'%3E%3Cline x1='75' y1='0' x2='75' y2='150' style='stroke:%23000; stroke-width:6' /%3E%3Cline x1='0' y1='75' x2='150' y2='75' style='stroke:%23000; stroke-width:6' /%3E%3C/svg%3E");
-  scale: 20%;
-  transform: rotate(45deg);
-  top: 1rem;
-  inset-inline-end: 2rem;
+/* Footer social icon style */
+.fa-stack-1x { font-size: 1.3em; }
+i { vertical-align: middle; 
+    color: #6d28d9;
 }
