@@ -82,6 +82,26 @@
   inset-inline-end: 2rem;
 }
 
+/* Scroll progress bars */
+.progressBarLeft,
+.progressBarRight {
+  background-color: white;
+  opacity: 0.25;
+}
+.progressLeft,
+.progressRight {
+  background-color: white;
+}
+.progressBarLeft.light-mode,
+.progressBarRight.light-mode {
+  background-color: black;
+  opacity: 0.25;
+}
+.progressLeft.light-mode,
+.progressRight.light-mode {
+  background-color: black;
+}
+
 /* Contact form */
 .input {
   background-color: white;
