@@ -2,6 +2,7 @@
 import "../base.css"
 import "../themify-icons.css"
 import Navbar from '../components/Navbar.astro';
+import Copyright from "../components/copyright.astro";
 import Footer from '../components/Footer.astro';
 import ScrollProgress from '../components/scrollProgress.astro';
 import SideNav from '../components/sideNav.astro';
@@ -28,6 +29,7 @@ const { title } = Astro.props;
 	
 	<body class={Background}>
 		<Navbar />
+		<Copyright />
 		<SideNav />
 		<ScrollProgress />
 		<slot />

@@ -1,0 +1,20 @@
+<!-- Home page copyright -->
+<div class="copyright fixed lg:bottom-10 xl:bottom-20 right-36 text-white border-2 border-red-500">
+    <p>© 2024 Fluent Innovations - All Rights Reserved - <a href="#" class="hover:none">Terms of Service</a></p>
+</div>
+
+<script>
+    document.addEventListener('scroll', function () {
+        const homeSection = document.getElementById('home');
+        const copyright = document.querySelector('.copyright');
+  
+        if (homeSection && copyright) {
+            const rect = homeSection.getBoundingClientRect();
+            const isHomeSectionVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+  
+            copyright.classList.toggle('slide-up', isHomeSectionVisible);
+        }
+    });
+  </script>
+
+<!-- from previous footer - lg:py-0 lg:px-8 xl:px-36
