@@ -1,18 +1,24 @@
-<!-- Side nav -->   
-<!-- Social icons -->
-<div class="fixed h-[49rem] w-20 left-1 bottom-20 grid grid-flow-row content-end justify-center text-md invisible lg:visible">
-    <div><a href="#"><i class="side-nav fab fa-facebook-f fa-fw"></i></a></div>
-    <div class="pt-6"><a href="#"><i class="side-nav fab fa-x-twitter fa-fw"></i></a></div>
-    <div class="pt-6"><a href="#"><i class="side-nav fab fa-instagram fa-fw"></i></a></div>
-</div>
-
-<!-- Back to top -->
-<div class="fixed h-[49rem] w-20 right-1 bottom-20 grid grid-flow-row content-end text-sm invisible xl:visible">
-    <div class="side-nav -rotate-90 mb-12"><a href="/">Back To Top</a></div>
-    <div><a href="/" class="grid justify-center"><i class="side-nav fas fa-angle-up"></i></a></div>
+<!-- Back to top button -->   
+<div class="back-to-top fixed h-[49rem] w-20 right-1 bottom-20 grid grid-flow-row content-end text-sm invisible xl:visible">
+    <div class="-rotate-90 mb-12"><a href="/">Back To Top</a></div>
+    <div><a href="/" class="grid justify-center"><i class="back-to-top fas fa-angle-up"></i></a></div>
 </div>
 
 <script>
+   // Hides back to top button on home page //
+    document.addEventListener('scroll', function () {
+        const homeSection = document.getElementById('home');
+        const backToTopBtn = document.querySelector('.back-to-top');
+  
+      if (homeSection && backToTopBtn) {
+          const rect = homeSection.getBoundingClientRect();
+          const isHomeSectionVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+  
+      backToTopBtn.classList.toggle('slide-out', isHomeSectionVisible);
+      }
+    });
+
+
     // Toggles between light and dark mode on scroll //
     // Function to handle scroll and toggle dark mode for specific sections
     function handleScrollToggle() {
@@ -28,7 +34,7 @@
       });
     
     // Toggle dark mode class based on the active section
-      toggleDarkModeClass('side-nav', currentSectionId);
+      toggleDarkModeClass('back-to-top', currentSectionId);
     }
     
     // Function to toggle dark mode class for a specific section
@@ -37,7 +43,7 @@
     
       for (const element of elements) {
         // Toggle dark mode class based on the active section
-        element.classList.toggle('dark-mode', currentSectionId === 'home' || currentSectionId === 'solutions');
+        element.classList.toggle('dark-mode', currentSectionId === 'solutions');
       }
     }
 

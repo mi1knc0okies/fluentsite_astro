@@ -5,7 +5,8 @@ import Navbar from '../components/Navbar.astro';
 import Copyright from "../components/copyright.astro";
 import Footer from '../components/Footer.astro';
 import ScrollProgress from '../components/scrollProgress.astro';
-import SideNav from '../components/sideNav.astro';
+import SideSocialIcons from '../components/sideSocialIcons.astro';
+import BackToTopBtn from "../components/backToTopBtn.astro";
 import Background from '../background.css';
 
 interface Props {
@@ -30,7 +31,8 @@ const { title } = Astro.props;
 	<body class={Background}>
 		<Navbar />
 		<Copyright />
-		<SideNav />
+		<SideSocialIcons />
+		<BackToTopBtn />
 		<ScrollProgress />
 		<slot />
 		<Footer />
