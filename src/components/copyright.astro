@@ -1,5 +1,5 @@
 <!-- Home page copyright -->
-<div class="copyright fixed lg:bottom-10 xl:bottom-20 right-36 text-white border-2 border-red-500">
+<div class="copyright fixed invisible lg:visible lg:h-12 xl:h-24 bottom-0 lg:right-8 xl:right-36 text-white">
     <p>© 2024 Fluent Innovations - All Rights Reserved - <a href="#" class="hover:none">Terms of Service</a></p>
 </div>
 
@@ -12,9 +12,13 @@
             const rect = homeSection.getBoundingClientRect();
             const isHomeSectionVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
   
-            copyright.classList.toggle('slide-up', isHomeSectionVisible);
+            if (isHomeSectionVisible) {
+                // Add a class to make copyright visible
+                copyright.classList.remove('slide-out');
+            } else {
+                // Remove the class to hide copyright
+                copyright.classList.add('slide-out');
+            }
         }
     });
-  </script>
-
-<!-- from previous footer - lg:py-0 lg:px-8 xl:px-36
+  </script> 

@@ -9,10 +9,10 @@ export default {
 			center: true,
 			padding: {
 				DEFAULT: '1rem',
-				sm: '2rem',
-				lg: '3rem',
-				xl: '4rem',
-				'2xl': '4rem',
+				sm: '1rem',
+				lg: '2rem',
+				xl: '3.5rem',
+				'2xl': '3.5rem',
 			}
 		},	
 		fontSize: {

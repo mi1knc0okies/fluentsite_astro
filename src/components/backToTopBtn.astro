@@ -1,6 +1,6 @@
 <!-- Back to top button -->   
-<div class="back-to-top fixed h-[49rem] w-20 right-1 bottom-20 grid grid-flow-row content-end text-sm invisible xl:visible">
-    <div class="-rotate-90 mb-12"><a href="/">Back To Top</a></div>
+<div class="back-to-top fixed bottom-[4.5rem] right-0 w-[4.5rem] grid grid-flow-row justify-center text-sm invisible xl:visible">
+    <div class="-rotate-90 whitespace-nowrap mb-12"><a href="/">Back To Top</a></div>
     <div><a href="/" class="grid justify-center"><i class="back-to-top fas fa-angle-up"></i></a></div>
 </div>
 
@@ -14,7 +14,7 @@
           const rect = homeSection.getBoundingClientRect();
           const isHomeSectionVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
   
-      backToTopBtn.classList.toggle('slide-out', isHomeSectionVisible);
+      backToTopBtn.classList.toggle('slide-in', isHomeSectionVisible);
       }
     });
 
