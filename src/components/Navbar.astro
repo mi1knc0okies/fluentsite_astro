@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import FILogo from "../images/FIlogo9.png"  
 ---
 <!-- Navbar mobile -->
-<div tabindex="0" class="lg:hidden collapse collapse-plus fixed bg-white rounded-none text-black shadow">
+<div tabindex="0" class="lg:hidden collapse collapse-plus fixed bg-white rounded-noneshadow">
   <div class="collapse-title py-2">
     <a href="/"><Image src={FILogo} alt="Fluent Innovations" height={64}></a>
   </div>
@@ -63,7 +63,7 @@ import FILogo from "../images/FIlogo9.png"
       });
     }
 
-    // Toggles between light and dark mode on scroll //
+    // Toggles between light and dark mode on scroll on XL+ screen size //
     // Function to check screen size 
     function isXL() {
       return window.innerWidth >= 1280; // XL breakpoint value

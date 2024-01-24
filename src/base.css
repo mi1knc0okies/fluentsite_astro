@@ -86,30 +86,48 @@
 
 /* Social icons side nav */
 .side-social-icons {
-  color: black;
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.54,0.18,0.36,0.81), color 0.7s cubic-bezier(0.54,0.18,0.36,0.81);
 }
-.side-social-icons.dark-mode {
+.side-social-icons.dark-page {
   color: white;
+  opacity: 1;
+}
+.side-social-icons.light-page {
+  color: black;
+  opacity: 1;
 }
 
 /* Back to top button */
 .back-to-top {
-  color: black;
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.54,0.18,0.36,0.81), color 0.7s cubic-bezier(0.54,0.18,0.36,0.81);
 }
-.back-to-top.dark-mode {
+.back-to-top.light-page {
+  color: black;
+  opacity: 1;
+}
+.back-to-top.dark-page {
   color: white;
+  opacity: 1;
 }
 .fa-angle-up {
-  -webkit-text-stroke: 1px black;
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.54,0.18,0.36,0.81), color 0.7s cubic-bezier(0.54,0.18,0.36,0.81);
 }
-.fa-angle-up.dark-mode {
+.fa-angle-up.light-page {
+  -webkit-text-stroke: 1px black;
+  opacity: 1;
+}
+.fa-angle-up.dark-page {
   -webkit-text-stroke: 1px white;
+  opacity: 1;
 }
 /* Back to top button slide in/out */
 .back-to-top,
 .fa-angle-up {
   transform: translateX(0);
-  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+  transition: transform 0.7s cubic-bezier(0.54,0.18,0.36,0.81), opacity 0.7s cubic-bezier(0.54,0.18,0.36,0.81);
 }
 .back-to-top.slide-in,
 .fa-angle-up.slide-in {
@@ -118,35 +136,43 @@
 }
 
 /* Scroll progress bars */
+.progressLeft,
+.progressRight,
 .progressBarLeft,
 .progressBarRight {
-  background-color: black;
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.54,0.18,0.36,0.81), color 0.7s cubic-bezier(0.54,0.18,0.36,0.81);
+}
+.progressBarLeft.light-page,
+.progressBarRight.light-page {
   opacity: 0.25;
-}
-.progressLeft,
-.progressRight {
   background-color: black;
 }
-.progressBarLeft.dark-mode,
-.progressBarRight.dark-mode {
+.progressLeft.light-page,
+.progressRight.light-page {
+  opacity: 1;
+  background-color: black;
+}
+.progressBarLeft.dark-page,
+.progressBarRight.dark-page {
+  opacity: 0.25;
   background-color: white;
-  opacity: 0.25;
 }
-.progressLeft.dark-mode,
-.progressRight.dark-mode {
+.progressLeft.dark-page,
+.progressRight.dark-page {
+  opacity: 1;
   background-color: white;
 }
 
 /* Copyright animation */
 .copyright {
   transform: translateY(0);
-  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+  transition: transform 0.7s cubic-bezier(0.54,0.18,0.36,0.81), opacity 0.7s cubic-bezier(0.54,0.18,0.36,0.81);
 }
 .copyright.slide-out {
   transform: translateY(100%);
   opacity: 0;
 }
-
 
 /* Contact form */
 .input {
