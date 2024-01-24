@@ -4,26 +4,32 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'montserrat';
-    src: url('../public/fonts/montserrat.ttf') format('ttf');
+  font-family: 'roboto';
+  src: url('public/fonts/roboto.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'roboto';
-    src: url('../public/fonts/roboto.ttf') format('ttf');
+  font-family: 'montserrat';
+  src: url('public/fonts/montserrat.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @layer base {
   h1 {
-    @apply text-3xl lg:text-4xl font-bold tracking-wide leading-snug mb-6;
+    @apply text-3xl lg:text-4xl font-['montserrat'] font-semibold leading-snug mb-6;
   }
   h2 {
-    @apply text-xl tracking-wide leading-snug mb-4;
+    @apply text-xl font-['montserrat'] leading-snug mb-4;
   }
   h3 {
-    @apply text-lg leading-snug mb-4;
+    @apply text-lg font-['montserrat'] leading-snug mb-4;
   }
   p {
-    @apply font-light leading-relaxed;
+    @apply leading-relaxed;
   }
 }
 
@@ -86,8 +92,8 @@
 
 /* Social icons side nav */
 .side-social-icons {
-  opacity: 0;
-  transition: opacity 0.7s cubic-bezier(0.54,0.18,0.36,0.81), color 0.7s cubic-bezier(0.54,0.18,0.36,0.81);
+  color: black;
+  transition: color 0.7s cubic-bezier(0.54,0.18,0.36,0.81);
 }
 .side-social-icons.dark-page {
   color: white;
@@ -100,7 +106,6 @@
 
 /* Back to top button */
 .back-to-top {
-  opacity: 0;
   transition: opacity 0.7s cubic-bezier(0.54,0.18,0.36,0.81), color 0.7s cubic-bezier(0.54,0.18,0.36,0.81);
 }
 .back-to-top.light-page {
@@ -112,7 +117,6 @@
   opacity: 1;
 }
 .fa-angle-up {
-  opacity: 0;
   transition: opacity 0.7s cubic-bezier(0.54,0.18,0.36,0.81), color 0.7s cubic-bezier(0.54,0.18,0.36,0.81);
 }
 .fa-angle-up.light-page {
@@ -136,11 +140,15 @@
 }
 
 /* Scroll progress bars */
-.progressLeft,
-.progressRight,
 .progressBarLeft,
 .progressBarRight {
-  opacity: 0;
+  background-color: black;
+  opacity: 0.25;
+  transition: opacity 0.7s cubic-bezier(0.54,0.18,0.36,0.81), color 0.7s cubic-bezier(0.54,0.18,0.36,0.81);
+}
+.progressLeft,
+.progressRight {
+  background-color: black;
   transition: opacity 0.7s cubic-bezier(0.54,0.18,0.36,0.81), color 0.7s cubic-bezier(0.54,0.18,0.36,0.81);
 }
 .progressBarLeft.light-page,
