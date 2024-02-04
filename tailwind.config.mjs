@@ -37,9 +37,9 @@ export default {
 		  {
 			dark: {
 			  ...require("daisyui/src/theming/themes")["dark"],
-			  "primary": "white",
-			  "secondary": "#f5d0fe",
-			  "accent": "#6d28d9",
+			  "primary": "#7e22ce",
+			  "secondary": "#fed7aa",
+			  "accent": "#d946ef",
 			},
 		  },
 		],

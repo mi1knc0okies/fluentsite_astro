@@ -1,7 +1,7 @@
 <!-- Back to top button -->   
 <div class="back-to-top fixed bottom-[4.5rem] right-0 w-[4.5rem] grid grid-flow-row justify-center text-sm invisible xl:visible">
-    <div class="-rotate-90 whitespace-nowrap mb-12"><a href="/">Back To Top</a></div>
-    <div><a href="/" class="grid justify-center"><i class="back-to-top fas fa-angle-up"></i></a></div>
+    <div class="-rotate-90 whitespace-nowrap mb-12"><a href="#home" class="back-to-top">Back To Top</a></div>
+    <div><a href="#home" class="grid justify-center"><i class="back-to-top fas fa-angle-up"></i></a></div>
 </div>
 
 <script>
@@ -34,7 +34,7 @@
     }
 
 // Toggles between light and dark pages on scroll //
-    // Function to handle scroll and toggle dark mode for specific sections
+    // Function to handle scroll and toggle light and dark pages for specific sections
     function handleScrollToggle() {
       const sections = document.querySelectorAll('section');
       let currentSectionId = '';
@@ -47,11 +47,11 @@
         }
       });
     
-    // Toggle dark page class based on the active section
+    // Toggle light and dark page classes based on the active section
       togglePageClasses('back-to-top', currentSectionId);
     }
     
-    // Function to toggle dark page class for a specific section
+    // Function to toggle light and dark page classes for a specific section
     function togglePageClasses(className: string, currentSectionId: string) {
       const elements = document.getElementsByClassName(className);
     

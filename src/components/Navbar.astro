@@ -1,14 +1,14 @@
 ---
 import { Image } from "astro:assets";
-import FILogo from "../images/FIlogo9.png"  
+import FILogo from "../images/FIlogo7.png"  
 ---
 <!-- Navbar mobile -->
-<div tabindex="0" class="lg:hidden collapse collapse-plus fixed bg-white rounded-noneshadow">
+<div tabindex="0" class="lg:hidden collapse collapse-plus fixed bg-white rounded-none shadow">
   <div class="collapse-title py-2">
     <a href="/"><Image src={FILogo} alt="Fluent Innovations" height={64}></a>
   </div>
   <div class="collapse-content"> 
-        <ul tabindex="0" class="py-2 z-[1] text-gray-500">
+        <ul tabindex="0" class="py-2 z-1 text-gray-500">
             <li class="mb-4"><a href="#home">Home</a></li>
             <li class="mb-4"><a href="#mission">Our mission</a></li>
             <li class="mb-4"><a href="#services">What we do</a></li>
@@ -63,7 +63,7 @@ import FILogo from "../images/FIlogo9.png"
       });
     }
 
-    // Toggles between light and dark mode on scroll on XL+ screen size //
+    // Toggles between light and dark pages on scroll on XL+ screen size //
     // Function to check screen size 
     function isXL() {
       return window.innerWidth >= 1280; // XL breakpoint value
@@ -73,7 +73,7 @@ import FILogo from "../images/FIlogo9.png"
         handleScrollToggle();
       }
     });
-    // Function to handle scroll and toggle dark mode for specific sections
+    // Function to handle scroll and toggle light page for specific sections
     function handleScrollToggle() {
       const sections = document.querySelectorAll('section');
       let currentSectionId = '';
@@ -86,17 +86,18 @@ import FILogo from "../images/FIlogo9.png"
         }
       });
 
-    // Toggle dark mode class based on the active section
-      toggleDarkModeClass('nav-link', currentSectionId);
+    // Toggle light page class based on the active section
+      toggleLightPageClass('nav-link', currentSectionId);
     }
 
-    // Function to toggle dark mode class for a specific section
-    function toggleDarkModeClass(className: string, currentSectionId: string) {
+    // Function to toggle light page class for a specific section
+    function toggleLightPageClass(className: string, currentSectionId: string) {
       const elements = document.getElementsByClassName(className);
 
       for (const element of elements) {
-        // Toggle dark mode class based on the active section
-        element.classList.toggle('dark-mode', currentSectionId === 'home' || currentSectionId === 'solutions');
+        // Toggle light page class based on the active section
+        element.classList.toggle('light-page', currentSectionId === 'mission' || currentSectionId === 'services' 
+          || currentSectionId === 'work' || currentSectionId === 'contact');
       }
     }
 </script>
