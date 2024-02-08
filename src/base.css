@@ -35,10 +35,10 @@
 
 /* Buttons */
 .btn.btn-primary {
-  @apply hover:bg-accent hover:border-accent hover:text-white;
+  @apply hover:bg-transparent hover:border-accent hover:text-accent;
 }
 .btn.btn-outline {
-  @apply hover:bg-accent hover:border-accent hover:text-white;
+  @apply hover:bg-transparent hover:border-accent hover:text-white;
 }
 
 /* Navbar links */
