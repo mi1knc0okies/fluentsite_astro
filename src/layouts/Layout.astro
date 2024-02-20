@@ -7,7 +7,7 @@ import Footer from '../components/Footer.astro';
 import ScrollProgress from '../components/scrollProgress.astro';
 import SideSocialIcons from '../components/sideSocialIcons.astro';
 import BackToTopBtn from "../components/backToTopBtn.astro";
-import Background from '../background.css';	
+import '../background.css';	
 
 interface Props {
 	title: string;
@@ -28,7 +28,7 @@ const { title } = Astro.props;
 		<script src="https://kit.fontawesome.com/8915c7ee57.js" crossorigin="anonymous"></script>
 	</head>
 	
-	<body class={Background}>
+	<body>
 		<Navbar />
 		<SideSocialIcons />
 		<BackToTopBtn />
